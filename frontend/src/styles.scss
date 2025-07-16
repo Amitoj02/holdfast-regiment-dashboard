@@ -23,9 +23,13 @@ html {
 }
 
 /* You can add global styles to this file, and also import other style files */
+$primary-color: mat.m2-get-color-from-palette($primary-palette, 80);
+$tertiary-color: mat.m2-get-color-from-palette($tertiary-palette, 80);
+
 
 html, body {
     height: 100%;
+    color: $primary-color;
     background-color: mat.m2-get-color-from-palette($tertiary-palette, 10);
 }
 
