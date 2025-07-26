@@ -1,0 +1,62 @@
+
+@use '../../../styles' as styles;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+
+.bg-1, .bg-2 {
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        filter: blur(2px);
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    > * {
+        position: relative;
+        z-index: 3;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bg-1 {
+    background-image: url('/assets/images/backgrounds/bg-1.jpg');
+}
+.bg-2 {
+    //background-image: url('/assets/images/backgrounds/bg-2.jpg');
+}
+
+.hero-logo {
+    display: flex;
+    width: 90%;
+    height: fit-content;
+
+    max-width: 500px; //desktop
+}
+
+.hero-button {
+    font-size: 20px;
+    font-family: styles.$brand-font;
+    font-weight: 800;
+}

@@ -2,13 +2,28 @@
 // For more information: https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 @use 'styles/theme-colors' as *;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import "@fontsource/montserrat"; // defaults to 400 weight
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat.elevation-classes();
-@include mat.app-background();
 
+//@include mat.elevation-classes();
+//@include mat.app-background();
+
+// THEME VARIABLES
+$primary-color: mat.m2-get-color-from-palette($primary-palette, 80);
+$tertiary-color: mat.m2-get-color-from-palette($tertiary-palette, 10);
+
+$primary-bg-color: mat.m2-get-color-from-palette($tertiary-palette, 10);
+$secondary-bg-color: black;
+
+$brand-font: "Cinzel", serif;
+$secondary-font: "Montserrat", sans-serif;
+
+$primary-txt-color: mat.m2-get-color-from-palette($tertiary-palette, 90);
+$accent-txt-color: mat.m2-get-color-from-palette($primary-palette, 80);
 
 html {
     @include mat.theme((
@@ -17,23 +32,42 @@ html {
             primary: $primary-palette,
             tertiary: $tertiary-palette
         ),
-        typography: Roboto,
+        typography: (
+            plain-family: Roboto,
+            brand-family: Cinzel,
+            bold-weight: 700,
+            medium-weight: 400,
+            regular-weight: 600,
+        ),
         density: 0,
     ));
+    @include mat.button-overrides((
+        protected-container-color: $primary-color,
+        protected-label-text-color: $tertiary-color,
+        protected-ripple-color: mat.m2-get-color-from-palette($primary-palette, 60),
+    ));
 }
-
-/* You can add global styles to this file, and also import other style files */
-$primary-color: mat.m2-get-color-from-palette($primary-palette, 80);
-$tertiary-color: mat.m2-get-color-from-palette($tertiary-palette, 80);
-
 
 html, body {
     height: 100%;
     color: $primary-color;
-    background-color: mat.m2-get-color-from-palette($tertiary-palette, 10);
+    background-color: $primary-bg-color;
 }
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    @extend .secondary-font;
 }
+
+.primary-font {
+     font-family: $brand-font;
+ }
+
+.secondary-font {
+    font-family: $secondary-font;
+}
+
+.txt-accent {
+    color: $accent-txt-color !important;
+}
+

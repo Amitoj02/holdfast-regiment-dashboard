@@ -1,0 +1,51 @@
+@use '../../../styles' as styles;
+@use 'bootstrap/scss/bootstrap' as *;
+
+nav {
+    display: flex;
+    background-color: styles.$secondary-bg-color;
+    user-select: none;
+    padding: 8px;
+    font-family: styles.$brand-font;
+}
+
+.left-section, .center-section, .right-section {
+    display: flex;
+    flex: 1;
+}
+
+.hf-nav-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: styles.$primary-txt-color;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 30px;
+
+    cursor: pointer;
+
+    &:not(.hf-nav-logo) {
+        padding: 0.7rem;
+    }
+
+    &:hover {
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+
+    &.active {
+        text-decoration: underline;
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+}
+
+.hf-center-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
