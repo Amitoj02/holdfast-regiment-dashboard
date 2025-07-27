@@ -11,6 +11,8 @@
 
 
 .bg-1, .bg-2 {
+    position: relative; // ✅ This is required
+    overflow: hidden;
 
     &::before {
         content: '';
@@ -42,7 +44,7 @@
     background-image: url('/assets/images/backgrounds/bg-1.jpg');
 }
 .bg-2 {
-    //background-image: url('/assets/images/backgrounds/bg-2.jpg');
+    background-image: url('/assets/images/backgrounds/bg-2.jpg');
 }
 
 .hero-logo {
@@ -57,4 +59,9 @@
     font-size: 20px;
     font-family: styles.$brand-font;
     font-weight: 800;
+}
+
+.text-content {
+    max-width: 70%; //desktop
+    text-align: center;
 }

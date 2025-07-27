@@ -1,10 +1,9 @@
 import {Component, Input} from '@angular/core';
-import {NgOptimizedImage, NgStyle} from '@angular/common';
+import {NgStyle} from '@angular/common';
 
 @Component({
     selector: 'flourish-divider',
     imports: [
-        NgOptimizedImage,
         NgStyle
     ],
     templateUrl: './flourish-divider.component.html',
