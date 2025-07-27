@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
+import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
+import {FlourishDividerComponent} from '../flourish-divider/flourish-divider.component';
 
 @Component({
-  selector: 'home',
+    selector: 'home',
     imports: [
-        NgOptimizedImage, MatButtonModule
+        MatButtonModule, FlourishDividerComponent
     ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
