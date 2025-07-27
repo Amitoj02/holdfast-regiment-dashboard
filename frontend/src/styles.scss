@@ -14,6 +14,7 @@
 
 // THEME VARIABLES
 $primary-color: mat.m2-get-color-from-palette($primary-palette, 80);
+$secondary-color: mat.m2-get-color-from-palette($tertiary-palette, 20);
 $tertiary-color: mat.m2-get-color-from-palette($tertiary-palette, 10);
 
 $primary-bg-color: mat.m2-get-color-from-palette($tertiary-palette, 10);

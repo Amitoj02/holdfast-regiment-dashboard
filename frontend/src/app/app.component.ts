@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {RouterOutlet} from '@angular/router';
+import {REGIMENT_TITLE} from './constants/regiment-details';
 
 @Component({
     selector: 'app-root',
@@ -13,5 +14,5 @@ import {RouterOutlet} from '@angular/router';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-    title = 'Amitoj';
+    title = REGIMENT_TITLE;
 }

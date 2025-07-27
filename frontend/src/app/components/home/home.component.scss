@@ -1,5 +1,6 @@
 
 @use '../../../styles' as styles;
+@use '../../../styles/theme-colors' as *;
 
 .section {
     display: flex;
@@ -22,6 +23,7 @@
         background-size: cover;
         background-position: center;
         filter: blur(2px);
+        transform: scale(1.01); // to avoid edge clipping from blur
         z-index: 1;
     }
 
@@ -64,4 +66,15 @@
 .text-content {
     max-width: 70%; //desktop
     text-align: center;
+}
+
+.footer-button {
+    width: fit-content;
+    padding: 16px 20px;
+    cursor: pointer;
+    background-color: styles.$secondary-color;
+    user-select: none;
+    img {
+        height: 16px;
+    }
 }
