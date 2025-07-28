@@ -55,6 +55,10 @@ html, body {
     background-color: $primary-bg-color;
 }
 
+a {
+    color: $primary-txt-color;
+}
+
 body {
     margin: 0;
     @extend .secondary-font;
