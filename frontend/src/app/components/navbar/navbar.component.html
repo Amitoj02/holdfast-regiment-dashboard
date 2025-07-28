@@ -1,28 +1,45 @@
 <nav>
-    <section class="left-section">
-        <div class="hf-nav-item active">
-            Home
-        </div>
-        <div class="hf-nav-item">
-            Gallery
-        </div>
-        <div class="hf-nav-item">
-            Events
-        </div>
-    </section>
-    <section class="center-section">
-        <div class="hf-nav-item hf-nav-logo">
-            <img ngSrc="assets/images/logos/regiment-logo-75.png" alt="Menu" class="menu-icon" height="50" width="50">
-        </div>
-    </section>
-    <section class="right-section">
-        <div class="hf-nav-item txt-accent">
-        </div>
-        <div class="hf-nav-item txt-accent">
-            Join Now
-        </div>
-        <div class="hf-nav-item">
-            Login
-        </div>
-    </section>
+    @if (isMobile) {
+
+        <section class="mobile-section">
+            <img ngSrc="assets/images/logos/regiment-logo-75.png" alt="Menu" class="menu-icon" height="50"
+                 width="50">
+            <h5 class="ms-2 m-0">Lords Of Holdfast</h5>
+            <button mat-icon-button class="ms-auto" (click)="openMobileNavbar()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </section>
+
+    } @else {
+
+        <section class="left-section">
+            <div class="hf-nav-item active">
+                Home
+            </div>
+            <div class="hf-nav-item">
+                Gallery
+            </div>
+            <div class="hf-nav-item">
+                Events
+            </div>
+        </section>
+        <section class="center-section">
+            <div class="hf-nav-item hf-nav-logo">
+                <img ngSrc="assets/images/logos/regiment-logo-75.png" alt="Menu" class="menu-icon" height="50"
+                     width="50">
+            </div>
+        </section>
+        <section class="right-section">
+            <div class="hf-nav-item txt-accent">
+            </div>
+            <div class="hf-nav-item txt-accent">
+                Join Now
+            </div>
+            <div class="hf-nav-item">
+                Login
+            </div>
+        </section>
+
+
+    }
 </nav>
