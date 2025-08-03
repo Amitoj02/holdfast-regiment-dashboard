@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
-import {FlourishDividerComponent} from '../flourish-divider/flourish-divider.component';
+import {FlourishDividerComponent} from '../core/flourish-divider/flourish-divider.component';
 import {NgStyle} from '@angular/common';
 import {NavbarComponent} from '../navbar/navbar.component';
 import {REGIMENT_TITLE} from '../../constants/regiment-details';
