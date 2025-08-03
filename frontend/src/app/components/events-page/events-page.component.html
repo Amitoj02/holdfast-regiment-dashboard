@@ -1,0 +1,22 @@
+<section class="container  py-5">
+
+    <h2><mat-icon>keep</mat-icon> Featured Events</h2>
+
+    <div class="row row-cols-1 row-cols-md-2">
+        @for (event of [1]; track event) {
+            <div class="col g-4">
+                <event-item></event-item>
+            </div>
+        }
+    </div>
+
+    <h2 class="mt-4">All Events</h2>
+
+    <div class="row row-cols-1 row-cols-md-2">
+        @for (event of [1,2,3,4,5,5]; track event) {
+            <div class="col g-4">
+                <event-item></event-item>
+            </div>
+        }
+    </div>
+</section>

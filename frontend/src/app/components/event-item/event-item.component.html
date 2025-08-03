@@ -1,0 +1,32 @@
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Event Title</mat-card-title>
+    </mat-card-header>
+    <!--  TODO: replace the image  -->
+    <img mat-card-image class="banner my-3" src="assets/images/placeholders/placeholder_banner.png" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-row mb-1">
+                <mat-icon class="me-2">event</mat-icon>
+                Sunday, 1st August, 2025
+            </div>
+            <div class="d-flex flex-row">
+                <mat-icon class="me-2">access_time</mat-icon>
+                10:00 AM - 5:00 PM
+            </div>
+        </div>
+
+    </mat-card-content>
+    <mat-card-footer class="pb-0 p-3">
+        <mat-chip-set>
+            <mat-chip><app-icon matChipAvatar src="ic-flag-usa"></app-icon> NA</mat-chip>
+            <mat-chip><app-icon matChipAvatar src="ic-steam-logo-white"></app-icon> Steam Only</mat-chip>
+        </mat-chip-set>
+    </mat-card-footer>
+    <mat-card-actions class="p-3">
+        <button mat-raised-button class="me-2">Accept</button>
+        <button mat-button class="me-2">Join Discord</button>
+    </mat-card-actions>
+</mat-card>
