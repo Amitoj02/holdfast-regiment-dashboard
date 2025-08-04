@@ -5,11 +5,12 @@ import {NgStyle} from '@angular/common';
 import {NavbarComponent} from '../navbar/navbar.component';
 import {REGIMENT_TITLE} from '../../constants/regiment-details';
 import {MatRipple} from '@angular/material/core';
+import {CurrentServersComponent} from '../current-servers/current-servers.component';
 
 @Component({
     selector: 'home',
     imports: [
-        MatButtonModule, FlourishDividerComponent, NgStyle, NavbarComponent, MatRipple
+        MatButtonModule, FlourishDividerComponent, NgStyle, NavbarComponent, MatRipple, CurrentServersComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'

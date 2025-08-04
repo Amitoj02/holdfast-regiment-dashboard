@@ -1,0 +1,12 @@
+<section class="container  py-5">
+
+    <h2><mat-icon>photo_library</mat-icon> Gallery</h2>
+
+    <div class="row row-cols-1 row-cols-md-2">
+        @for (event of [1,2,3,4,5,5]; track event) {
+            <div class="col g-4">
+                <gallery-item></gallery-item>
+            </div>
+        }
+    </div>
+</section>

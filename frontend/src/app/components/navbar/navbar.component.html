@@ -13,13 +13,13 @@
     } @else {
 
         <section class="left-section">
-            <div class="hf-nav-item active">
+            <div class="hf-nav-item" [routerLink]="['/']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="RouterOptions">
                 Home
             </div>
-            <div class="hf-nav-item">
+            <div class="hf-nav-item" [routerLink]="['/gallery']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="RouterOptions">
                 Gallery
             </div>
-            <div class="hf-nav-item">
+            <div class="hf-nav-item" [routerLink]="['/events']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="RouterOptions">
                 Events
             </div>
         </section>
@@ -32,10 +32,10 @@
         <section class="right-section">
             <div class="hf-nav-item txt-accent">
             </div>
-            <div class="hf-nav-item txt-accent">
+            <div class="hf-nav-item txt-accent" [routerLink]="['/join']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="RouterOptions">
                 Join Now
             </div>
-            <div class="hf-nav-item">
+            <div class="hf-nav-item" [routerLink]="['/login']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="RouterOptions">
                 Login
             </div>
         </section>
